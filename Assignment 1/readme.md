@@ -5,6 +5,6 @@
 
 ### Contributors:
 
-- [Aman Yadav](https://github.com/yadav-aman)
 - [Akansh Mittal](https://github.com/akansh2000)
+- [Aman Yadav](https://github.com/yadav-aman)
 - [Aryaman Singh Rana](https://github.com/wickedbaba)
