@@ -1,0 +1,73 @@
+[System]
+Name='CSD311_A6'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=27
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='grocerieItem'
+Range=[0 10]
+NumMFs=3
+MF1='lessOptions':'gauss2mf',[1.131 -1.513 1.24 0.01808]
+MF2='averageOptions':'gauss2mf',[0.693 4.736 0.4657 5.077]
+MF3='highOptions':'gauss2mf',[1.406 9.816 1.427 10.65]
+
+[Input2]
+Name='electronicsItem'
+Range=[0 10]
+NumMFs=3
+MF1='lessOptions':'gauss2mf',[1.132 -1.097 1.132 0.4031]
+MF2='averageOptions':'gauss2mf',[0.6998 4.614 0.3416 5.761]
+MF3='highOptions':'gauss2mf',[1.417 9.927 1.417 10.76]
+
+[Input3]
+Name='competition'
+Range=[0 10]
+NumMFs=3
+MF1='lowCompetition':'gauss2mf',[1.416 -1.781 1.416 -0.948]
+MF2='averageCompetition':'gauss2mf',[0.8357 4.754 0.6155 5.181]
+MF3='highCompetition':'gauss2mf',[1.081 9.647 1.081 11.27]
+
+[Output1]
+Name='sales'
+Range=[0 10]
+NumMFs=3
+MF1='lowSales':'gauss2mf',[1.133 -0.7506 0.8036 0.5322]
+MF2='averageSales':'gauss2mf',[0.6468 4.562 0.6519 5.422]
+MF3='highSales':'gauss2mf',[1.13 10.41 1.131 11.91]
+
+[Rules]
+3 3 1, 3 (1) : 1
+3 3 2, 3 (1) : 1
+3 3 3, 1 (1) : 1
+3 2 1, 2 (1) : 1
+3 2 2, 2 (1) : 1
+3 2 3, 1 (1) : 1
+3 1 1, 2 (1) : 1
+3 1 2, 2 (1) : 1
+3 1 3, 1 (1) : 1
+2 3 1, 3 (1) : 1
+2 3 2, 2 (1) : 1
+2 3 3, 2 (1) : 1
+2 2 1, 3 (1) : 1
+2 2 2, 2 (1) : 1
+2 2 3, 1 (1) : 1
+2 1 1, 2 (1) : 1
+2 1 2, 1 (1) : 1
+2 1 3, 1 (1) : 1
+1 3 1, 3 (1) : 1
+1 3 2, 2 (1) : 1
+1 3 3, 2 (1) : 1
+1 2 1, 3 (1) : 1
+1 2 2, 2 (1) : 1
+1 2 3, 1 (1) : 1
+1 1 1, 2 (1) : 1
+1 1 2, 1 (1) : 1
+1 1 3, 1 (1) : 1
